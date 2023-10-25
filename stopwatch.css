@@ -1,0 +1,88 @@
+.stopwatch {
+  /* background: linear-gradient(180deg, rgba(117,238,216,1) 0%, rgba(222,226,227,1) 100%); */
+  
+  background: linear-gradient( 
+    to bottom, 
+     #ace69e, #e53150 );
+  color: #000000;
+  margin: 0 auto;
+
+  font-size: 40px;
+
+  width: 80vw;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 25px;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+
+.stopwatch__value {
+  display: flex;
+  gap: 3vw;
+
+  margin-bottom: 40px;
+  
+}
+
+.stopwatch__inner {
+  background-color: rgb(170, 166, 166);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 65px;  
+  height: 65px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+
+  padding: 10px;
+  
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  
+  font-size: 20px;
+}
+
+.btn {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+
+  width: 75px;
+  height: 75px;
+
+  border: 1px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+
+  background: linear-gradient(180deg, rgb(216, 235, 232) 0%, rgba(79,209,197,1) 100%);
+}
+
+.btn:hover {
+  background: linear-gradient(180deg, rgba(79,209,197,1) 0%, rgb(216, 235, 232) 100%);
+  
+}
+
+.btn:active {
+  transform: translateY(2px);
+  border: 2px solid black;
+  box-shadow: 0px 3px 5px black;
+  
+}
+
+.btn--stop {
+  color: #e53150;
+}
+
+.btn--start {
+  color: #2b8a40;
+}
