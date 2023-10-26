@@ -33,6 +33,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  text-align: center;
   
   width: 65px;  
   height: 65px;

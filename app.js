@@ -45,11 +45,12 @@ let sec = 0;
 let msec = 0;
 
 function startStopwatch() {
-  msec++;
+  // msec++;
+  msec += 99; // для дебага
 
   if (msec > 99) {
     sec++;
-    secondsBlock.textContent = "0" + sec;
+    // secondsBlock.textContent = "0" + sec;
 
     msec = 0;
   }
@@ -68,7 +69,7 @@ function startStopwatch() {
 }
 
 btnStart.addEventListener("click", () => {
-
+  clearInterval(interval);
   interval = setInterval(startStopwatch, 10);
 });
 
