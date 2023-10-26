@@ -45,8 +45,8 @@ let sec = 0;
 let msec = 0;
 
 function startStopwatch() {
-  // msec++;
-  msec += 99; // для дебага
+  msec++;
+  // msec += 99; // для дебага
 
   if (msec > 99) {
     sec++;
