@@ -45,13 +45,23 @@ let sec = 0;
 let msec = 0;
 
 function startStopwatch() {
-  msec++;
+  msec += 1;
   // msec += 99; // для дебага
 
   if (msec > 99) {
-    sec++;
-    // secondsBlock.textContent = "0" + sec;
+    sec += 1;
+    // sec += 59; // для дебага
+    msec = 0;
+  }
 
+  if (sec > 59) {
+    min += 1;
+    sec = 0;
+  }
+
+  if (min === 60) {
+    clearInterval(interval);
+    sec = 0;
     msec = 0;
   }
 
@@ -66,22 +76,24 @@ function startStopwatch() {
   } else {
     secondsBlock.textContent = sec;
   }
+
+  if (min < 10) {
+    minutesBlock.textContent = "0" + min;
+  } else {
+    minutesBlock.textContent = min;
+  }
 }
 
 btnStart.addEventListener("click", () => {
-  clearInterval(interval);
+  clearInterval(interval); // чтобы не происходило ускорение
   interval = setInterval(startStopwatch, 10);
 });
 
-
-
 btnStop.addEventListener("click", () => {
-
   clearInterval(interval);
 });
 
 btnReset.addEventListener("click", () => {
-
   clearInterval(interval);
 
   min = 0;
